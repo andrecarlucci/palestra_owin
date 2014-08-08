@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Throwin {
+    using AppFunc = Func<IDictionary<string, object>, Task>;
     public class Mw2 {
-        private Func<IDictionary<string, object>, Task> _next;
+        private AppFunc _next;
 
-        public Mw2(Func<IDictionary<string, object>, Task> next) {
+        public Mw2(AppFunc next) {
             _next = next;
         }
 
